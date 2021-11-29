@@ -1,15 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <DateInput msg=""/>
+  <RadioInput msg=""/>
+  <Info msg=""/>
+  <ButtonInput msg="" v-on:validation="message='you have registered your appointment'" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DateInput from './components/DateInput.vue'
+import RadioInput from './components/RadioInput.vue'
+import Info from './components/Info.vue'
+import ButtonInput from './components/ButtonInput.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DateInput,
+    RadioInput,
+    Info,
+    ButtonInput
+  },
+   data() {
+    return{
+     message:'you have registered your appointment' 
+    }
+    
   }
 }
 </script>
